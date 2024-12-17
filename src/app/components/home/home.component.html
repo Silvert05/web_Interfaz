@@ -1,0 +1,109 @@
+<!-- Carrusel -->
+<div class="card shadow-4 border-round-lg custom-carousel-container">
+  <p-carousel 
+      [value]="images" 
+      [numVisible]="3" 
+      [numScroll]="2" 
+      [circular]="true" 
+      [autoplayInterval]="3000" 
+      class="custom-carousel">
+      
+    <ng-template pTemplate="header">
+        <h2 class="text-center text-primary font-bold"></h2>
+    </ng-template>
+    
+    <ng-template let-image pTemplate="item">
+        <div class="text-center">
+            <img 
+                [src]="image.src" 
+                [alt]="image.alt" 
+                class="carousel-image border-round-lg shadow-2">
+            <h4 class="text-primary mt-2">{{ image.title }}</h4>
+        </div>
+    </ng-template>
+    
+    <ng-template pTemplate="footer">
+        <p class="text-center text-bluegray-600 mt-3">Lansser tu mejor opción de compra</p>
+    </ng-template>
+  </p-carousel>
+</div>
+
+<!-- Descripción del Auto y su Imagen -->
+<div class="grid mt-4">
+  <div class="col-12 md:col-6">
+    <p-card header="FERRARI 296 GTB Deportivo" class="auto-description-card shadow-2">
+      <p class="auto-description-text">
+        Cuenta con un motor V6 de 120° y un motor eléctrico enchufable (PHEV) que le permite alcanzar hasta 830 CV. 
+        Puede alcanzar los 100 km/h en 2,9 segundos, los 200 km/h en 7,3 segundos y su velocidad máxima supera los 330 km/h. 
+        Tiene un diseño aerodinámico y compacto con líneas formales y bien definidas. 
+        El habitáculo es elegante y sofisticado, con instrumentos que se vuelven negros cuando el motor está apagado. 
+        Tiene unas emisiones de CO2 de 149 g/km, un consumo de 6,6 l/100 km y un consumo de energía eléctrica de 174 Wh/km. 
+        Tiene los modos de conducción eDrive, Hybrid, Performance y Qualify. 
+        Tiene las siguientes medidas: 4565 mm de largo, 1958 mm de ancho y 1187 mm de alto.
+      </p>
+    </p-card>
+  </div>
+  
+  <div class="col-12 md:col-6">
+    <p-card header="" class="auto-image-card shadow-2">
+      <img src="https://imagenes.eltiempo.com/files/image_1200_600/uploads/2017/10/20/59ea9701455e0.jpeg" class="auto-image"/>
+    </p-card>
+  </div>
+</div>
+
+<!-- Cards de Productos -->
+<div class="grid">
+  <div class="col-12 md:col-4">
+    <p-card header="Audi R6" class="shadow-2">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxHN0g8UpJrJaML0RVeqRVGmSB09BFGr9lmw&s" alt="Producto 1" class="card-img">
+      <p>Es un coche deportivo con un motor V8 biturbo que le permite alcanzar altas velocidades en poco tiempo.</p>
+      <p-footer>
+        <div class="p-d-flex p-jc-between">
+          <p-button label="Comprar" icon="pi pi-cart" class="p-button-outlined p-mr-2"></p-button>
+          <p-button label="Detalles" icon="pi pi-info-circle" class="p-button-outlined"></p-button>
+        </div>
+      </p-footer>
+    </p-card>
+  </div>
+  
+  <div class="col-12 md:col-4">
+    <p-card header="Audi RS7" class="shadow-2">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRI2iUhTWHeULY8jGDBJMMQVZYEDFIczsFpKA&s" alt="Producto 2" class="card-img">
+      <p> Tiene rines de aleación de 22 pulgadas en diseño de 5 brazos en V y neumáticos 285/30, de fundición de aluminio..</p>
+      <p-footer>
+        <div class="p-d-flex p-jc-between">
+          <p-button label="Comprar" icon="pi pi-cart" class="p-button-outlined p-mr-2"></p-button>
+          <p-button label="Detalles" icon="pi pi-info-circle" class="p-button-outlined"></p-button>
+        </div>
+      </p-footer>
+    </p-card>
+  </div>
+  
+  <div class="col-12 md:col-4">
+    <p-card header="Audi R8" class="shadow-2">
+      <img src="https://i.blogs.es/997c82/audi-e-tron-gt-9/1366_2000.jpeg" alt="Producto 3" class="card-img">
+      <p>Es un superdeportivo de motor central-trasero con tracción total quattro</p>
+      <p-footer>
+        <div class="p-d-flex p-jc-between">
+          <p-button label="Comprar" icon="pi pi-cart" class="p-button-outlined p-mr-2"></p-button>
+          <p-button label="Detalles" icon="pi pi-info-circle" class="p-button-outlined"></p-button>
+        </div>
+      </p-footer>
+    </p-card>
+  </div>
+</div>
+
+<!-- Footer -->
+<p-footer class="footer">
+  <div class="footer-container">
+    <div class="grid p-3">
+      <div class="col-12 md:col-6">
+        <p class="text-white">© 2024 Mi Empresa. Todos los derechos reservados.</p>
+      </div>
+      <div class="col-12 md:col-6 text-right">
+        <a href="#" class="text-white">Términos y condiciones</a> | 
+        <a href="#" class="text-white">Política de privacidad</a>
+      </div>
+    </div>
+  </div>
+</p-footer>
