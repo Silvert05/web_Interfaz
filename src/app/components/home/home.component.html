@@ -9,7 +9,9 @@
       class="custom-carousel">
       
     <ng-template pTemplate="header">
-        <h2 class="text-center text-primary font-bold"></h2>
+        <h2 class="text-center text-primary font-bold">
+          <i class="pi pi-images mr-2"></i>Galería de Autos
+        </h2>
     </ng-template>
     
     <ng-template let-image pTemplate="item">
@@ -18,45 +20,59 @@
                 [src]="image.src" 
                 [alt]="image.alt" 
                 class="carousel-image border-round-lg shadow-2">
-            <h4 class="text-primary mt-2">{{ image.title }}</h4>
+            <h4 class="text-primary mt-2">
+              <i class="pi pi-car mr-2"></i>{{ image.title }}
+            </h4>
         </div>
     </ng-template>
     
     <ng-template pTemplate="footer">
-        <p class="text-center text-bluegray-600 mt-3">Lansser tu mejor opción de compra</p>
+        <p class="text-center text-bluegray-600 mt-3">
+          <i class="pi pi-tag mr-2"></i>Lansser tu mejor opción de compra
+        </p>
     </ng-template>
   </p-carousel>
 </div>
-
 <!-- Descripción del Auto y su Imagen -->
 <div class="grid mt-4">
+  <!-- Columna de Descripción -->
   <div class="col-12 md:col-6">
     <p-card header="FERRARI 296 GTB Deportivo" class="auto-description-card shadow-2">
       <p class="auto-description-text">
-        Cuenta con un motor V6 de 120° y un motor eléctrico enchufable (PHEV) que le permite alcanzar hasta 830 CV. 
-        Puede alcanzar los 100 km/h en 2,9 segundos, los 200 km/h en 7,3 segundos y su velocidad máxima supera los 330 km/h. 
-        Tiene un diseño aerodinámico y compacto con líneas formales y bien definidas. 
-        El habitáculo es elegante y sofisticado, con instrumentos que se vuelven negros cuando el motor está apagado. 
-        Tiene unas emisiones de CO2 de 149 g/km, un consumo de 6,6 l/100 km y un consumo de energía eléctrica de 174 Wh/km. 
-        Tiene los modos de conducción eDrive, Hybrid, Performance y Qualify. 
-        Tiene las siguientes medidas: 4565 mm de largo, 1958 mm de ancho y 1187 mm de alto.
+        <i class="pi pi-info-circle mr-2 text-primary"></i>
+        <strong>Motor:</strong> V6 de 120° combinado con motor eléctrico enchufable (PHEV), que entrega hasta 830 CV.
+        <br/>
+        <strong>Aceleración:</strong> 0 a 100 km/h en 2,9 segundos y 0 a 200 km/h en 7,3 segundos.
+        <br/>
+        <strong>Velocidad máxima:</strong> Supera los 330 km/h.
+        <br/>
+        <strong>Diseño:</strong> Aerodinámico y compacto con líneas formales bien definidas, ideal para un alto rendimiento en carretera.
       </p>
     </p-card>
   </div>
   
+  <!-- Columna de Imagen del Auto -->
   <div class="col-12 md:col-6">
-    <p-card header="" class="auto-image-card shadow-2">
-      <img src="https://imagenes.eltiempo.com/files/image_1200_600/uploads/2017/10/20/59ea9701455e0.jpeg" class="auto-image"/>
+    <p-card header="Imagen del Ferrari 296 GTB" class="auto-image-card shadow-2">
+      <img 
+        src="https://imagenes.eltiempo.com/files/image_1200_600/uploads/2017/10/20/59ea9701455e0.jpeg" 
+        alt="Ferrari 296 GTB"
+        class="auto-image"
+        [ngStyle]="{ 'transition': 'transform 0.5s', 'width': '100%', 'height': 'auto' }"
+        
+      />
     </p-card>
   </div>
 </div>
+
+
 
 <!-- Cards de Productos -->
 <div class="grid">
   <div class="col-12 md:col-4">
     <p-card header="Audi R6" class="shadow-2">
       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxHN0g8UpJrJaML0RVeqRVGmSB09BFGr9lmw&s" alt="Producto 1" class="card-img">
-      <p>Es un coche deportivo con un motor V8 biturbo que le permite alcanzar altas velocidades en poco tiempo.</p>
+      <p><i class="pi pi-cog mr-2 text-primary"></i>Es un coche deportivo con un motor V8 biturbo que le permite alcanzar altas velocidades en poco tiempo.</p>
       <p-footer>
         <div class="p-d-flex p-jc-between">
           <p-button label="Comprar" icon="pi pi-cart" class="p-button-outlined p-mr-2"></p-button>
@@ -69,7 +85,7 @@
   <div class="col-12 md:col-4">
     <p-card header="Audi RS7" class="shadow-2">
       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRI2iUhTWHeULY8jGDBJMMQVZYEDFIczsFpKA&s" alt="Producto 2" class="card-img">
-      <p> Tiene rines de aleación de 22 pulgadas en diseño de 5 brazos en V y neumáticos 285/30, de fundición de aluminio..</p>
+      <p><i class="pi pi-tachometer mr-2 text-primary"></i>Tiene rines de aleación de 22 pulgadas en diseño de 5 brazos en V y neumáticos 285/30, de fundición de aluminio.</p>
       <p-footer>
         <div class="p-d-flex p-jc-between">
           <p-button label="Comprar" icon="pi pi-cart" class="p-button-outlined p-mr-2"></p-button>
@@ -82,7 +98,7 @@
   <div class="col-12 md:col-4">
     <p-card header="Audi R8" class="shadow-2">
       <img src="https://i.blogs.es/997c82/audi-e-tron-gt-9/1366_2000.jpeg" alt="Producto 3" class="card-img">
-      <p>Es un superdeportivo de motor central-trasero con tracción total quattro</p>
+      <p><i class="pi pi-shield mr-2 text-primary"></i>Es un superdeportivo de motor central-trasero con tracción total quattro.</p>
       <p-footer>
         <div class="p-d-flex p-jc-between">
           <p-button label="Comprar" icon="pi pi-cart" class="p-button-outlined p-mr-2"></p-button>
@@ -93,16 +109,136 @@
   </div>
 </div>
 
+<div class="grid">
+  <!-- Galería de imágenes -->
+  <div class="col-12 md:col-6">
+    <p-galleria 
+      [value]="galleriaImages" 
+      [responsiveOptions]="responsiveOptions" 
+      [numVisible]="3" 
+      [circular]="true" 
+      [showItemNavigators]="true" 
+      [showThumbnails]="true" 
+      class="custom-gallery">
+      
+      <ng-template pTemplate="item" let-image>
+        <img 
+          [src]="image.itemImageSrc" 
+          [alt]="image.alt" 
+          class="gallery-image shadow-2 border-round-lg">
+      </ng-template>
+      
+      <ng-template pTemplate="thumbnail" let-image>
+        <img 
+          [src]="image.thumbnailImageSrc" 
+          [alt]="image.alt" 
+          class="thumbnail-image shadow-1">
+      </ng-template>
+    </p-galleria>
+  </div>
+
+  <!-- Apartado de texto -->
+  <div class="col-12 md:col-6">
+    <div class="card shadow-2 border-round-lg p-4">
+      <h2 class="text-primary font-bold">
+        <i class="pi pi-info-circle mr-2"></i>Bugatti
+      </h2>
+      <p class="text-bluegray-800">
+        La compañía Bugatti fue fundada en 1909 en la región Alsacia por el francés, nacido en Italia, Ettore Bugatti. Construyó la reputación de la marca gracias a la construcción de modelos rápidos y bonitos, incluidos cupés de gran turismo y coches de carreras que ganaron grandes premios.
+      </p>
+      <p class="text-bluegray-600">
+        El Bugatti Veyron es famoso por su increíble capacidad de aceleración. Puede acelerar de 0 a 100 km/h (0 a 62 mph) en tan solo 2,5 segundos . Esta impresionante aceleración es posible gracias a su potente motor y a su avanzado sistema de propulsión, que le permiten alcanzar altas velocidades muy rápidamente.
+      </p>
+      <p-button 
+        label="Más Información" 
+        icon="pi pi-search" 
+        class="p-button-rounded p-button-outlined mt-4">
+      </p-button>
+    </div>
+  </div>
+</div>
+
+<!-- Formulario -->
+<div 
+  class="card shadow-4 border-round-lg p-4 mt-4 bg-white"
+  style="box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);">
+  <h2 class="text-center" style="color: #1E293B; font-weight: bold; margin-bottom: 1.5rem;">
+    <i class="pi pi-envelope mr-2"></i>Contáctanos
+  </h2>
+  <form class="p-fluid">
+    <!-- Campo Nombre -->
+    <div class="field mb-4">
+      <label for="name" class="block font-bold text-bluegray-800 mb-2">
+        <i class="pi pi-user mr-2"></i>Nombre
+      </label>
+      <input 
+        id="name" 
+        type="text" 
+        pInputText 
+        class="w-full border-round-lg p-2 border-1 surface-border" 
+        placeholder="Ingresa tu nombre" 
+      />
+    </div>
+    
+    <!-- Campo Correo Electrónico -->
+    <div class="field mb-4">
+      <label for="email" class="block font-bold text-bluegray-800 mb-2">
+        <i class="pi pi-envelope mr-2"></i>Correo Electrónico
+      </label>
+      <input 
+        id="email" 
+        type="email" 
+        pInputText 
+        class="w-full border-round-lg p-2 border-1 surface-border" 
+        placeholder="Ingresa tu correo electrónico" 
+      />
+    </div>
+    
+    <!-- Campo Mensaje -->
+    <div class="field mb-4">
+      <label for="message" class="block font-bold text-bluegray-800 mb-2">
+        <i class="pi pi-comment mr-2"></i>Mensaje
+      </label>
+      <textarea 
+        id="message" 
+        rows="4" 
+        pInputTextarea 
+        class="w-full border-round-lg p-2 border-1 surface-border" 
+        placeholder="Escribe tu mensaje"
+      ></textarea>
+    </div>
+    
+    <!-- Botones -->
+    <div class="field">
+      <div class="p-d-flex p-jc-between">
+        <p-button 
+          label="Enviar" 
+          icon="pi pi-send" 
+          class="p-button-rounded custom-button-class"
+        ></p-button>
+        <p-button 
+          label="Limpiar" 
+          icon="pi pi-times" 
+          class="p-button-rounded custom-button-class"
+          type="reset"
+        ></p-button>
+      </div>
+    </div>
+  </form>
+</div>
+
 <!-- Footer -->
 <p-footer class="footer">
   <div class="footer-container">
     <div class="grid p-3">
       <div class="col-12 md:col-6">
-        <p class="text-white">© 2024 Mi Empresa. Todos los derechos reservados.</p>
+        <p class="text-white">
+          <i class="pi pi-copyright mr-2"></i>© 2024 Mi Empresa. Todos los derechos reservados.
+        </p>
       </div>
       <div class="col-12 md:col-6 text-right">
-        <a href="#" class="text-white">Términos y condiciones</a> | 
-        <a href="#" class="text-white">Política de privacidad</a>
+        <a href="#" class="text-white"><i class="pi pi-file mr-1"></i>Términos y condiciones</a> | 
+        <a href="#" class="text-white"><i class="pi pi-lock mr-1"></i>Política de privacidad</a>
       </div>
     </div>
   </div>
