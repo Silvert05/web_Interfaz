@@ -204,3 +204,53 @@
   transform: scale(1.1); /* Aumenta el tamaño de la imagen al 110% */
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Sombra más difusa */
 }
+
+
+.auto-sold-bar {
+  background-color: #1E293B; /* Color oscuro elegante relacionado con autos de lujo */
+  color: #fff;
+  padding: 20px 50px; /* Espaciado superior/inferior y lateral */
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+.auto-sold-bar:hover {
+  background-color: #0f172a; /* Cambio de color en hover */
+}
+
+.auto-sold-bar-content {
+  max-width: 1200px;
+  text-align: center;
+  width: 100%;
+}
+
+.auto-sold-bar-content h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: transform 0.3s ease-in-out, color 0.3s ease;
+}
+
+.auto-sold-bar-content h2 .highlight-text {
+  color: #ff6347; /* Color atractivo para resaltar el texto */
+  font-size: 2.5rem;
+  transition: font-size 0.3s ease-in-out;
+}
+
+.auto-sold-bar-content h2:hover .highlight-text {
+  font-size: 2.7rem; /* Efecto de tamaño dinámico en hover */
+  transform: scale(1.1); /* Efecto de escala en hover */
+}
+
+.auto-sold-bar-content .auto-description {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  color: #d1d5db; /* Color de texto suave para una lectura fácil */
+  line-height: 1.6;
+}
