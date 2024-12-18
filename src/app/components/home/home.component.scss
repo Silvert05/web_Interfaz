@@ -237,20 +237,4 @@
   transition: transform 0.3s ease-in-out, color 0.3s ease;
 }
 
-.auto-sold-bar-content h2 .highlight-text {
-  color: #ff6347; /* Color atractivo para resaltar el texto */
-  font-size: 2.5rem;
-  transition: font-size 0.3s ease-in-out;
-}
 
-.auto-sold-bar-content h2:hover .highlight-text {
-  font-size: 2.7rem; /* Efecto de tamaño dinámico en hover */
-  transform: scale(1.1); /* Efecto de escala en hover */
-}
-
-.auto-sold-bar-content .auto-description {
-  font-size: 1.2rem;
-  margin-top: 10px;
-  color: #d1d5db; /* Color de texto suave para una lectura fácil */
-  line-height: 1.6;
-}
